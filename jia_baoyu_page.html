@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>贾宝玉 - 红楼梦人物群像</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=ZCOOL+XiaoWei&family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Noto Serif SC', serif;
+            background: #F8F3E9;
+            overflow: hidden;
+        }
+        .title-font {
+            font-family: 'ZCOOL XiaoWei', serif;
+        }
+        .scroll-bg {
+            background: linear-gradient(135deg, #F8F3E9 0%, #F0E6D2 100%);
+            border: 2px solid #D4A574;
+            border-radius: 8px;
+            box-shadow: 0 8px 32px rgba(212, 165, 116, 0.3);
+        }
+        .portrait-frame {
+            border: 3px solid #D4A574;
+            border-radius: 12px;
+            box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+        }
+        .floating {
+            animation: floating 4s ease-in-out infinite;
+        }
+        @keyframes floating {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        .fade-in {
+            animation: fadeIn 1.5s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateX(30px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        .slide-in {
+            animation: slideIn 1s ease-out;
+        }
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="min-h-screen p-8">
+    <div class="max-w-7xl mx-auto h-screen flex items-center">
+        <!-- 左侧人物画像 -->
+        <div class="w-1/2 flex justify-center items-center fade-in">
+            <div class="portrait-frame bg-white p-6 floating">
+                <img src="jia_baoyu.png" alt="贾宝玉" class="w-96 h-auto rounded-lg">
+            </div>
+        </div>
+        
+        <!-- 右侧人物信息 -->
+        <div class="w-1/2 space-y-6 slide-in">
+            <!-- 人物姓名和身份 -->
+            <div class="text-center mb-8">
+                <h1 class="title-font text-6xl font-bold text-amber-800 mb-2">贾宝玉</h1>
+                <p class="text-2xl text-gray-600">神瑛侍者 · 绛洞花主</p>
+                <div class="w-24 h-1 bg-gradient-to-r from-amber-600 to-amber-400 mx-auto mt-4"></div>
+            </div>
+            
+            <!-- 人物特点 -->
+            <div class="grid grid-cols-2 gap-6">
+                <div class="bg-white rounded-lg p-4 shadow-lg">
+                    <h4 class="text-lg font-bold text-amber-800 mb-2">
+                        <i class="fas fa-heart text-red-500 mr-2"></i>性格特征
+                    </h4>
+                    <p class="text-gray-700 text-sm leading-relaxed">
+                        叛逆纯真，重情轻利，博爱多情，厌恶仕途经济，追求精神自由。
+                    </p>
+                </div>
+                
+                <div class="bg-white rounded-lg p-4 shadow-lg">
+                    <h4 class="text-lg font-bold text-amber-800 mb-2">
+                        <i class="fas fa-flower text-pink-500 mr-2"></i>象征意义
+                    </h4>
+                    <p class="text-gray-700 text-sm leading-relaxed">
+                        女娲补天剩余石转世，象征叛逆精神和对封建礼教的反抗，代表新思想的萌芽。
+                    </p>
+                </div>
+                
+                <div class="bg-white rounded-lg p-4 shadow-lg">
+                    <h4 class="text-lg font-bold text-amber-800 mb-2">
+                        <i class="fas fa-book text-blue-500 mr-2"></i>主要情节
+                    </h4>
+                    <p class="text-gray-700 text-sm leading-relaxed">
+                        神游太虚、宝黛初会、共读西厢、挨打受惊、悬崖撒手等经典情节。
+                    </p>
+                </div>
+                
+                <div class="bg-white rounded-lg p-4 shadow-lg">
+                    <h4 class="text-lg font-bold text-amber-800 mb-2">
+                        <i class="fas fa-home text-green-500 mr-2"></i>居所环境
+                    </h4>
+                    <p class="text-gray-700 text-sm leading-relaxed">
+                        怡红院，富丽堂皇，"怡红快绿"，象征其贵族身份和对美好事物的追求。
+                    </p>
+                </div>
+            </div>
+            
+            <!-- 经典诗句 -->
+            <div class="bg-gradient-to-r from-amber-50 to-amber-100 rounded-lg p-6">
+                <h4 class="title-font text-xl font-bold text-amber-800 mb-4 text-center">经典诗句</h4>
+                <div class="text-center space-y-2">
+                    <p class="text-lg text-gray-700 italic">"女儿是水做的骨肉，男人是泥做的骨肉"</p>
+                    <p class="text-lg text-gray-700 italic">"世事洞明皆学问，人情练达即文章"</p>
+                </div>
+            </div>
+            
+            <!-- 特殊标记 -->
+            <div class="text-center">
+                <div class="inline-flex items-center space-x-2 bg-white rounded-full px-6 py-2 shadow-lg">
+                    <i class="fas fa-gem text-red-500"></i>
+                    <span class="text-gray-700 font-medium">通灵宝玉</span>
+                    <i class="fas fa-heart text-red-500"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+<script>
+    document.addEventListener('keydown', e => {
+        if (e.key === 'ArrowRight' || e.key === ' ') {
+            e.preventDefault();
+            window.parent.postMessage('go-next', '*');
+        } else if (e.key === 'ArrowLeft') {
+            e.preventDefault();
+            window.parent.postMessage('go-prev', '*');
+        }
+    });
+</script>
+</body>
+</html>

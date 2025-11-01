@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>红楼梦人物群像</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=ZCOOL+XiaoWei&family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Noto Serif SC', serif;
+            background: #F8F3E9;
+            overflow: hidden;
+        }
+        .title-font {
+            font-family: 'ZCOOL XiaoWei', serif;
+        }
+        .scroll-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23D4A574' fill-opacity='0.1'%3E%3Cpath d='M30 30c0-6.627-5.373-12-12-12s-12 5.373-12 12 5.373 12 12 12 12-5.373 12-12zm12 0c0-6.627-5.373-12-12-12s-12 5.373-12 12 5.373 12 12 12 12-5.373 12-12z'/%3C%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        .floating {
+            animation: floating 6s ease-in-out infinite;
+        }
+        @keyframes floating {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        .fade-in {
+            animation: fadeIn 2s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+    </style>
+</head>
+<body class="scroll-pattern min-h-screen flex items-center justify-center">
+    <div class="w-full h-screen flex items-center justify-center relative">
+        <!-- 背景装饰 -->
+        <div class="absolute inset-0 opacity-20">
+            <div class="absolute top-20 left-20 w-32 h-32 border border-amber-600 rounded-full floating"></div>
+            <div class="absolute bottom-20 right-20 w-24 h-24 border border-amber-600 rounded-full floating" style="animation-delay: -2s;"></div>
+            <div class="absolute top-1/2 left-10 w-16 h-16 border border-amber-600 rounded-full floating" style="animation-delay: -4s;"></div>
+        </div>
+        
+        <!-- 主要内容 -->
+        <div class="text-center z-10 fade-in">
+            <div class="mb-8">
+                <h1 class="title-font text-8xl font-bold text-amber-800 mb-4 text-shadow">
+                    红楼梦
+                </h1>
+                <h2 class="title-font text-5xl text-amber-700 mb-6 text-shadow">
+                    人物群像
+                </h2>
+                <div class="w-32 h-1 bg-gradient-to-r from-amber-600 to-amber-400 mx-auto mb-8"></div>
+            </div>
+            
+            <div class="mb-12">
+                <p class="text-2xl text-gray-700 mb-4 leading-relaxed">
+                    一个是阆苑仙葩，一个是美玉无瑕
+                </p>
+                <p class="text-xl text-gray-600 leading-relaxed">
+                    若说没奇缘，今生偏又遇着他
+                </p>
+            </div>
+            
+            <div class="flex justify-center items-center space-x-8 text-amber-700">
+                <div class="text-center">
+                    <div class="text-3xl font-bold">10</div>
+                    <div class="text-sm">位人物</div>
+                </div>
+                <div class="w-px h-12 bg-amber-400"></div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold">12</div>
+                    <div class="text-sm">首判词</div>
+                </div>
+                <div class="w-px h-12 bg-amber-400"></div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold">1</div>
+                    <div class="text-sm">个传奇</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 装饰性元素 -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-amber-600">
+            <i class="fas fa-chevron-down animate-bounce text-2xl"></i>
+        </div>
+    </div>
+<script>
+    document.addEventListener('keydown', e => {
+        if (e.key === 'ArrowRight' || e.key === ' ') {
+            e.preventDefault();
+            window.parent.postMessage('go-next', '*');
+        } else if (e.key === 'ArrowLeft') {
+            e.preventDefault();
+            window.parent.postMessage('go-prev', '*');
+        }
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>妙玉 - 红楼梦人物群像</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=ZCOOL+XiaoWei&family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Noto Serif SC', serif;
+            background: #F8F3E9;
+            overflow: hidden;
+        }
+        .title-font {
+            font-family: 'ZCOOL XiaoWei', serif;
+        }
+        .scroll-bg {
+            background: linear-gradient(135deg, #F8F3E9 0%, #F0E6D2 100%);
+            border: 2px solid #D4A574;
+            border-radius: 8px;
+            box-shadow: 0 8px 32px rgba(212, 165, 116, 0.3);
+        }
+        .portrait-frame {
+            border: 3px solid #D4A574;
+            border-radius: 12px;
+            box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+        }
+        .floating {
+            animation: floating 4s ease-in-out infinite;
+        }
+        @keyframes floating {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        .fade-in {
+            animation: fadeIn 1.5s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateX(30px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        .slide-in {
+            animation: slideIn 1s ease-out;
+        }
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="min-h-screen p-8">
+    <div class="max-w-7xl mx-auto h-screen flex items-center">
+        <!-- 左侧人物信息 -->
+        <div class="w-1/2 space-y-6 slide-in">
+            <!-- 人物姓名和身份 -->
+            <div class="text-center mb-8">
+                <h1 class="title-font text-6xl font-bold text-amber-800 mb-2">妙玉</h1>
+                <p class="text-2xl text-gray-600">栊翠主人 · 槛外人</p>
+                <div class="w-24 h-1 bg-gradient-to-r from-amber-600 to-amber-400 mx-auto mt-4"></div>
+            </div>
+            
+            <!-- 判词卷轴 -->
+            <div class="scroll-bg p-6 mb-6">
+                <div class="text-center mb-4">
+                    <h3 class="title-font text-2xl font-bold text-amber-800 mb-2">判词</h3>
+                </div>
+                <div class="text-center space-y-2">
+                    <p class="text-xl text-gray-700 leading-relaxed">欲洁何曾洁，</p>
+                    <p class="text-xl text-gray-700 leading-relaxed">云空未必空。</p>
+                    <p class="text-xl text-gray-700 leading-relaxed">可怜金玉质，</p>
+                    <p class="text-xl text-gray-700 leading-relaxed">终陷淖泥中。</p>
+                </div>
+            </div>
+            
+            <!-- 人物特点 -->
+            <div class="grid grid-cols-2 gap-6">
+                <div class="bg-white rounded-lg p-4 shadow-lg">
+                    <h4 class="text-lg font-bold text-amber-800 mb-2">
+                        <i class="fas fa-heart text-red-500 mr-2"></i>性格特征
+                    </h4>
+                    <p class="text-gray-700 text-sm leading-relaxed">
+                        清高脱俗，孤芳自赏，才华出众，性情怪僻，有严重的洁癖和优越感。
+                    </p>
+                </div>
+                
+                <div class="bg-white rounded-lg p-4 shadow-lg">
+                    <h4 class="text-lg font-bold text-amber-800 mb-2">
+                        <i class="fas fa-flower text-pink-500 mr-2"></i>象征意义
+                    </h4>
+                    <p class="text-gray-700 text-sm leading-relaxed">
+                        梅花象征高洁孤傲，代表出世与入世的矛盾，清高理想在现实中的破灭。
+                    </p>
+                </div>
+                
+                <div class="bg-white rounded-lg p-4 shadow-lg">
+                    <h4 class="text-lg font-bold text-amber-800 mb-2">
+                        <i class="fas fa-book text-blue-500 mr-2"></i>主要情节
+                    </h4>
+                    <p class="text-gray-700 text-sm leading-relaxed">
+                        品茶栊翠庵、赠梅宝玉、续诗悲寂寞、被劫下落不明等情节。
+                    </p>
+                </div>
+                
+                <div class="bg-white rounded-lg p-4 shadow-lg">
+                    <h4 class="text-lg font-bold text-amber-800 mb-2">
+                        <i class="fas fa-leaf text-green-500 mr-2"></i>修行生活
+                    </h4>
+                    <p class="text-gray-700 text-sm leading-relaxed">
+                        带发修行，精通道法，品茗论道，但凡心未泯，情丝难断。
+                    </p>
+                </div>
+            </div>
+            
+            <!-- 经典评价 -->
+            <div class="bg-gradient-to-r from-amber-50 to-amber-100 rounded-lg p-6">
+                <h4 class="title-font text-xl font-bold text-amber-800 mb-4 text-center">人物评价</h4>
+                <div class="text-center space-y-2">
+                    <p class="text-lg text-gray-700 italic">"气质美如兰，才华馥比仙"</p>
+                    <p class="text-lg text-gray-700 italic">"太高人愈妒，过洁世同嫌"</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 右侧人物画像 -->
+        <div class="w-1/2 flex justify-center items-center fade-in">
+            <div class="portrait-frame bg-white p-6 floating">
+                <img src="miao_yu.png" alt="妙玉" class="w-96 h-auto rounded-lg">
+            </div>
+        </div>
+    </div>
+<script>
+    document.addEventListener('keydown', e => {
+        if (e.key === 'ArrowRight' || e.key === ' ') {
+            e.preventDefault();
+            window.parent.postMessage('go-next', '*');
+        } else if (e.key === 'ArrowLeft') {
+            e.preventDefault();
+            window.parent.postMessage('go-prev', '*');
+        }
+    });
+</script>
+</body>
+</html>

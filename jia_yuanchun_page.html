@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>贾元春 - 红楼梦人物群像</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=ZCOOL+XiaoWei&family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Noto Serif SC', serif;
+            background: #F8F3E9;
+            overflow: hidden;
+        }
+        .title-font {
+            font-family: 'ZCOOL XiaoWei', serif;
+        }
+        .scroll-bg {
+            background: linear-gradient(135deg, #F8F3E9 0%, #F0E6D2 100%);
+            border: 2px solid #D4A574;
+            border-radius: 8px;
+            box-shadow: 0 8px 32px rgba(212, 165, 116, 0.3);
+        }
+        .portrait-frame {
+            border: 3px solid #D4A574;
+            border-radius: 12px;
+            box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+        }
+        .floating {
+            animation: floating 4s ease-in-out infinite;
+        }
+        @keyframes floating {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        .fade-in {
+            animation: fadeIn 1.5s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateX(30px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        .slide-in {
+            animation: slideIn 1s ease-out;
+        }
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="min-h-screen p-8">
+    <div class="max-w-7xl mx-auto h-screen flex items-center">
+        <!-- 左侧人物画像 -->
+        <div class="w-1/2 flex justify-center items-center fade-in">
+            <div class="portrait-frame bg-white p-6 floating">
+                <img src="jia_yuanchun.png" alt="贾元春" class="w-96 h-auto rounded-lg">
+            </div>
+        </div>
+        
+        <!-- 右侧人物信息 -->
+        <div class="w-1/2 space-y-6 slide-in">
+            <!-- 人物姓名和身份 -->
+            <div class="text-center mb-8">
+                <h1 class="title-font text-6xl font-bold text-amber-800 mb-2">贾元春</h1>
+                <p class="text-2xl text-gray-600">贤德妃 · 石榴花神</p>
+                <div class="w-24 h-1 bg-gradient-to-r from-amber-600 to-amber-400 mx-auto mt-4"></div>
+            </div>
+            
+            <!-- 判词卷轴 -->
+            <div class="scroll-bg p-6 mb-6">
+                <div class="text-center mb-4">
+                    <h3 class="title-font text-2xl font-bold text-amber-800 mb-2">判词</h3>
+                </div>
+                <div class="text-center space-y-2">
+                    <p class="text-xl text-gray-700 leading-relaxed">二十年来辨是非，</p>
+                    <p class="text-xl text-gray-700 leading-relaxed">榴花开处照宫闱。</p>
+                    <p class="text-xl text-gray-700 leading-relaxed">三春争及初春景，</p>
+                    <p class="text-xl text-gray-700 leading-relaxed">虎兕相逢大梦归。</p>
+                </div>
+            </div>
+            
+            <!-- 人物特点 -->
+            <div class="grid grid-cols-2 gap-6">
+                <div class="bg-white rounded-lg p-4 shadow-lg">
+                    <h4 class="text-lg font-bold text-amber-800 mb-2">
+                        <i class="fas fa-heart text-red-500 mr-2"></i>性格特征
+                    </h4>
+                    <p class="text-gray-700 text-sm leading-relaxed">
+                        贤孝才德，端庄稳重，深谙宫廷礼仪，但内心孤独忧郁，对家族命运忧心忡忡。
+                    </p>
+                </div>
+                
+                <div class="bg-white rounded-lg p-4 shadow-lg">
+                    <h4 class="text-lg font-bold text-amber-800 mb-2">
+                        <i class="fas fa-flower text-pink-500 mr-2"></i>象征意义
+                    </h4>
+                    <p class="text-gray-700 text-sm leading-relaxed">
+                        封建皇权的象征，家族荣耀的顶峰，也是贾府由盛转衰的关键转折点。
+                    </p>
+                </div>
+                
+                <div class="bg-white rounded-lg p-4 shadow-lg">
+                    <h4 class="text-lg font-bold text-amber-800 mb-2">
+                        <i class="fas fa-book text-blue-500 mr-2"></i>主要情节
+                    </h4>
+                    <p class="text-gray-700 text-sm leading-relaxed">
+                        选入宫中、晋封贵妃、省亲大典、制灯谜、赏中秋等宫廷生活。
+                    </p>
+                </div>
+                
+                <div class="bg-white rounded-lg p-4 shadow-lg">
+                    <h4 class="text-lg font-bold text-amber-800 mb-2">
+                        <i class="fas fa-crown text-yellow-500 mr-2"></i>政治地位
+                    </h4>
+                    <p class="text-gray-700 text-sm leading-relaxed">
+                        凤藻宫尚书，贤德妃，贾府的政治靠山，家族的荣耀象征。
+                    </p>
+                </div>
+            </div>
+            
+            <!-- 经典评价 -->
+            <div class="bg-gradient-to-r from-amber-50 to-amber-100 rounded-lg p-6">
+                <h4 class="title-font text-xl font-bold text-amber-800 mb-4 text-center">宫廷生活</h4>
+                <div class="text-center space-y-2">
+                    <p class="text-lg text-gray-700 italic">"榴花开处照宫闱，三春争及初春景"</p>
+                    <p class="text-lg text-gray-700 italic">"天伦乐至情至性，骨肉亲同气同声"</p>
+                </div>
+            </div>
+        </div>
+    </div>
+<script>
+    document.addEventListener('keydown', e => {
+        if (e.key === 'ArrowRight' || e.key === ' ') {
+            e.preventDefault();
+            window.parent.postMessage('go-next', '*');
+        } else if (e.key === 'ArrowLeft') {
+            e.preventDefault();
+            window.parent.postMessage('go-prev', '*');
+        }
+    });
+</script>
+</body>
+</html>
